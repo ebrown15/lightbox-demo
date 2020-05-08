@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Patua+One&display=swap');
+
+html {
+	font-size: 16px;
+}
+
+body {
+
+	color: #222;
+	font-family: 'Pacifico', cursive;
+}
+
+h1 {
+	font-size: 3rem;
+	text-shadow: 2px 2px 4px #ccc;
+}
+
+header {
+	margin-bottom: 2rem;
+}
+
+header,
+main {
+	margin: 0 auto;
+	max-width: 1140px;
+}
+
+main {
+	background: url("../img/ep_naturalwhite.png");
+	border: 1px solid #ccc;
+	padding: 2.5rem;
+	display: grid;
+	grid-template-columns: repeat(3, 380px);
+	/* grid-gap: 20px; */
+}
+
+img {
+	box-sizing: border-box;
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding: 1rem;
+}
+
+section {
+	position: relative;
+}
+
+section:first-child img,
+section:nth-child(2) img,
+section:last-child img {
+	transition: all 0.5s linear;
+}
+
+section:first-child:hover img,
+section:nth-child(2):hover img,
+section:last-child:hover img {
+	transform: rotate(0);
+	transition: all 0.5s linear;
+}
+
+section:first-child {
+	top: 4px;
+	left: 16px;
+}
+
+section:first-child img {
+	transform: rotate(5deg);
+}
+
+section:nth-child(2) img {
+	transform: rotate(-5deg);
+}
+
+section:last-child {
+	top: 8px;
+	left: -16px;
+}
+
+section:last-child img {
+	transform: rotate(5deg);
+}
+
+
+/* overwrite fancybox style */
+.fancybox-caption__body span {
+	font-family: "Patua One", serif;
+}
